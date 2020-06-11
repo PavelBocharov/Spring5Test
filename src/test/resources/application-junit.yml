@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: junit
+
+defaultUser:
+  login: JUnit_test_login

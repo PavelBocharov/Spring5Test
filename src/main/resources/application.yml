@@ -1,0 +1,6 @@
+spring:
+  profiles:
+    active: production
+
+defaultUser:
+  login: ${spring.profiles.active}
