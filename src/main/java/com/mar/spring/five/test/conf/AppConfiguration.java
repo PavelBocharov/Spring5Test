@@ -1,6 +1,6 @@
-package com.example.demo.conf;
+package com.mar.spring.five.test.conf;
 
-import com.example.demo.service.HelloService;
+import com.mar.spring.five.test.service.HelloService;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
