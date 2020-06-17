@@ -1,6 +1,7 @@
 package com.mar.spring.five.test.api;
 
 import com.mar.spring.five.test.service.HelloService;
+import com.mar.spring.five.test.service.logs.LogMethod;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -18,6 +19,7 @@ public class Controller {
     private HelloService helloService;
 
     @GetMapping("info")
+    @LogMethod
     public String info(
             @RequestParam(value = "login", required = false) String login
     ) {
