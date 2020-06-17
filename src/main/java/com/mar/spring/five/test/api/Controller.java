@@ -27,7 +27,6 @@ public class Controller {
     @LogMethod
     public HelloDto info(@RequestParam(value = "login", required = false) String login) {
         Hello hello = helloService.hello(login);
-        String response = hello.getMsg() + " Now date time - " + hello.getSendDate().toString();
         return conversionService.convert(hello, HelloDto.class);
     }
 
