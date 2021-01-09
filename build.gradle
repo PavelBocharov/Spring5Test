@@ -30,9 +30,10 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-cache:2.2.6.RELEASE'
 
 	implementation 'org.ehcache:ehcache:3.9.0'
-
 	implementation 'net.sf.ehcache:ehcache:2.10.6'
 
+	implementation 'io.swagger.core.v3:swagger-annotations:2.1.6'
+	implementation 'org.springdoc:springdoc-openapi-ui:1.5.2'
 
 
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {

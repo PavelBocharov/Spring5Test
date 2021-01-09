@@ -19,7 +19,7 @@ public class HelloToHelloDto implements Converter<Hello, HelloDto> {
         helloValidator.isValid(source);
         return HelloDto.builder()
                 .userName(source.getUserName())
-                .formatDate(source.getSendDate().toString())
+                .formatDate(source.getSendDate())
                 .msg(source.getMsg())
                 .build();
     }

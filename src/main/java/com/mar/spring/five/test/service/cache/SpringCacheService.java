@@ -1,13 +1,15 @@
 package com.mar.spring.five.test.service.cache;
 
+import org.springframework.boot.autoconfigure.cache.CacheManagerCustomizer;
 import org.springframework.cache.annotation.Cacheable;
+import org.springframework.cache.ehcache.EhCacheCacheManager;
 import org.springframework.stereotype.Component;
 
 import java.util.logging.Logger;
 
 @Component
 public class SpringCacheService
-//        implements CacheManagerCustomizer<EhCacheCacheManager>
+        implements CacheManagerCustomizer<EhCacheCacheManager>
 {
 
     private Logger log = Logger.getLogger(SpringCacheService.class.getSimpleName());
@@ -18,10 +20,12 @@ public class SpringCacheService
         return key.toUpperCase();
     }
 
-//    @Override
-//    public void customize(EhCacheCacheManager cacheManager) {
-//        cacheManager.setCacheNames(asList("MarStringCache"));
+    @Override
+    public void customize(EhCacheCacheManager cacheManager) {
 
+
+//        cacheManager.setCacheNames(asList("MarStringCache"));
+//
 //        cacheManager.setCacheManager(CacheManagerBuilder.newCacheManagerBuilder().withCache(
 //                "MarCacheAlias",
 //                CacheConfigurationBuilder.newCacheConfigurationBuilder(
@@ -36,5 +40,5 @@ public class SpringCacheService
 //        managerFactoryBean.setShared(true);
 //
 //        cacheManager.setCacheManager();
-//    }
+    }
 }
